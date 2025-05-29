@@ -30,9 +30,10 @@
     const user = params.get('user') || 'Unknown';
     const correct = params.get('correct') || '0';
     const incorrect = params.get('incorrect') || '0';
+    const total = params.get('total') || '0';
 
     document.getElementById('info').innerText =
-      `👤 User: ${user}\n✅ Correct Answers: ${correct}\n❌ Incorrect Answers: ${incorrect}`;
+      `👤 User: ${user}\n Total Answers: ${total}\n✅ Correct Answers: ${correct}\n❌ Incorrect Answers: ${incorrect}`;
   </script>
 </body>
 </html>
