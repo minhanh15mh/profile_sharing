@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shared Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background: #f2f2f2;
+      color: #333;
+    }
+    .container {
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Shared Quiz Profile</h2>
+    <p id="info">Loading...</p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const user = params.get('user') || 'Unknown';
+    const correct = params.get('correct') || '0';
+    const incorrect = params.get('incorrect') || '0';
+
+    document.getElementById('info').innerText =
+      `👤 User: ${user}\n✅ Correct Answers: ${correct}\n❌ Incorrect Answers: ${incorrect}`;
+  </script>
+</body>
+</html>
